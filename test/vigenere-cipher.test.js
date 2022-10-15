@@ -46,7 +46,7 @@ describe('Vigenere cipher', () => {
         () => directMachine.decrypt(),
         () => reverseMachine.decrypt('lala'),
         () => reverseMachine.decrypt(undefined, 'key'),
-        () => reverseMachine.decrypt()
+        () => reverseMachine.decrypt() 
       ], 'Incorrect arguments!');
 
       assert.strictEqual(res.every($ => $ === CORRECT_RESULT_MSG), true);

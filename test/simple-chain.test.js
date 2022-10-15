@@ -28,8 +28,8 @@ describe('Make chain!', () => {
             const res = checkForThrowingErrors.call(this, [
                 () => chainMaker.addLink(1).addLink(2).addLink(3).removeLink(0),
                 () => chainMaker.addLink(1).addLink(2).addLink(3).removeLink('2nd'),
-                () => chainMaker.addLink(1).addLink(2).addLink(3).removeLink(-2),
-                () => chainMaker.addLink(1).addLink(2).addLink(3).removeLink(4)
+               () => chainMaker.addLink(1).addLink(2).addLink(3).removeLink(-2),
+                () => chainMaker.addLink(1).addLink(2).addLink(3).removeLink(4) 
             ], 'You can\'t remove incorrect link!');
 
             assert.strictEqual(res.every($ => $ === CORRECT_RESULT_MSG), true);
